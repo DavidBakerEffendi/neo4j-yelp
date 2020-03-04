@@ -4,6 +4,14 @@ Contains Python scripts to import and model the Yelp challenge dataset into Neo4
 
 ## Getting Started
 
+### Step 0: Pre-processing the Yelp Dataset
+
+Due to Neo4j Community Edition's node/edge count limits and perhaps your PC's memory is not sufficient, you may want to look at only a subset of the 
+dataset and/or select features. I pre-process the dataset using my 
+[Yelp normalization tool](https://github.com/DavidBakerEffendi/yelp-normalization) and you may use and modify it for your needs.
+
+This project is designed to work with the dataset processed by my own tool as described in that project's README.
+
 ### Step 1: Getting Neo4j Community Edition
 
 Download the [Neo4j Community Edition](https://neo4j.com/download-thanks/?edition=community&release=4.0.1&flavour=unix) 
