@@ -1,3 +1,5 @@
+PROTO = "bolt"
 USER = "neo4j"
-PASSWORD = "bitnami"
-URI = "bolt://localhost:7687"
+PASSWORD = "MyPassword"
+HOSTNAME = "localhost"
+PORT = "7687"
