@@ -14,16 +14,17 @@ This project is designed to work with the dataset processed by my own tool as de
 
 ### Step 1: Getting Neo4j Community Edition
 
-Download the [Neo4j Community Edition](https://neo4j.com/download-thanks/?edition=community&release=4.0.1&flavour=unix) 
+Download the [Neo4j Community Server](https://neo4j.com/download-center/?ref=web-product-database/#community) (not desktop!)
 ZIP or tarball or start the Neo4j Docker container with the `docker-compose.yml` file.
 
 If using the ZIP or tarball, extract the archive to a directory e.g. `$HOME`:
 ```bash
-$ tar -xvzf neo4j-community-4.0.1-unix.tar.gz -C ~/.
+$ tar -xvzf neo4j-community-x.x.x-unix.tar.gz -C ~/.
 ```
+Note that `x.x.x` would refer to the version you are using.
 
 ### Step 2: Server Plugins and Configuration
-The `neo4j-community.x.x.x` directory (where `x.x.x` would be the version you are using) in this project contains details
+The `neo4j-community.x.x.x` directory in this project contains details
 on the files that need to be changed on the server. Note, the changes must be made on your server files and not on this 
 project! This project's directory is simply a demonstration. 
 
@@ -36,13 +37,13 @@ considers the three JSON files listed here.
 
 ### Step 3: Starting Neo4j
 
-If not using the Docker image, start Neo4j using the `neo4j` binary in the `neo4j-community-4.0.1/bin` file. Example:
+If not using the Docker image, start Neo4j using the `neo4j` binary in the `neo4j-community-x.x.x/bin` file. Example:
 ```bash
-$ ~/neo4j-community-4.0.1/bin/neo4j start
+$ ~/neo4j-community-x.x.x/bin/neo4j start
 ```
 Optionally, one can set their `~/.profile`, `~/.bashrc`, or `~/.zshrc` etc. to add Neo4j binaries to their path by adding the following line: 
 ```bash
-export PATH=/home/david/neo4j-community-4.0.1/bin:$PATH
+export PATH=/home/david/neo4j-community-x.x.x/bin:$PATH
 ```
 Then one can simply use:
 ```bash
