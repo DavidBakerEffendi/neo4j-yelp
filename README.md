@@ -51,7 +51,7 @@ $ neo4j start
 ```
 Note this needs to run with Oracle Java 11 or OpenJDK 11. I recommend using [AdoptOpenJDK 11](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot) and setting $JAVA_HOME to the location of the directory e.g. `export JAVA_HOME=/home/david/Downloads/jdk-11.0.5+10`.
 
-Neo4j browser should now be running on `http://localhost:7474`. Default username and password is `neo4j` and `neo4j` respectively.
+Neo4j browser should now be running on `http://localhost:8001`. Default username and password is `neo4j` and `neo4j` respectively. The bolt port is on `http://localhost:8000`. These port numbers are to comply with Stellenbosch University's port policies.
 
 ### Step 4: Python Dependencies
 
