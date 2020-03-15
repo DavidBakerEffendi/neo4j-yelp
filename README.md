@@ -37,7 +37,7 @@ considers the three JSON files listed here.
 
 ### Step 3: Installing Java
 
-Neo4j requires java to run. The version of Java necessary for Neo4j to run is dependent on the version e.g. Neo4j 4 requires Java 11. 
+Neo4j requires Java to run. The version of Java necessary for Neo4j to run is dependent on the Neo4j version e.g. Neo4j 4 requires Java 11. 
 
 I recommend using [AdoptOpenJDK](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot) and setting $JAVA_HOME to the location of the directory e.g. `export JAVA_HOME=/home/david/Downloads/jdk-11.0.5+10`.
 
