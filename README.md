@@ -35,7 +35,13 @@ The following files must be changed on the server:
 * `import/{business, review, user}.json`: All Yelp files one wishes to import must be placed here. This script only 
 considers the three JSON files listed here.
 
-### Step 3: Starting Neo4j
+### Step 3: Installing Java
+
+Neo4j requires java to run. The version of Java necessary for Neo4j to run is dependent on the version e.g. Neo4j 4 requires Java 11. 
+
+I recommend using [AdoptOpenJDK](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot) and setting $JAVA_HOME to the location of the directory e.g. `export JAVA_HOME=/home/david/Downloads/jdk-11.0.5+10`.
+
+### Step 4: Starting Neo4j
 
 If not using the Docker image, start Neo4j using the `neo4j` binary in the `neo4j-community-x.x.x/bin` file. Example:
 ```bash
@@ -49,18 +55,17 @@ Then one can simply use:
 ```bash
 $ neo4j start
 ```
-Note this needs to run with Oracle Java 11 or OpenJDK 11. I recommend using [AdoptOpenJDK 11](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot) and setting $JAVA_HOME to the location of the directory e.g. `export JAVA_HOME=/home/david/Downloads/jdk-11.0.5+10`.
 
 Neo4j browser should now be running on `http://localhost:8001`. Default username and password is `neo4j` and `neo4j` respectively. The bolt port is on `http://localhost:8000`. These port numbers are to comply with Stellenbosch University's port policies.
 
-### Step 4: Python Dependencies
+### Step 5: Python Dependencies
 
 Before running the `neo4j_yelp.py` script, make sure that you have installed all of the dependencies and edited `config.py` to contain your credentials. To download all the dependencies you can simply type:
 ```bash
 $ pip3 install -r requirements.txt --user
 ```
 
-### Step 5: Import the Dataset
+### Step 6: Import the Dataset
 
 Now that everything is configured and ready, the import script can be run with:
 ```bash
