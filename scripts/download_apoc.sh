@@ -5,16 +5,16 @@ FILE_NAME=apoc-$APOC_VERSION-all.jar
 DEST=./neo4j-community-x.x.x/plugins/
 
 if [ -f "$DEST$FILE_NAME" ]; then
-    echo $PREF"APOC present, continuing..."
+    echo "$PREF APOC present, continuing..."
 else 
-    echo $PREF"Preparing to download APOC"
+    echo "$PREF Preparing to download APOC"
     rm -f $FILE_NAME; rm -f $DEST$FILE_NAME;
 
-    echo $PREF"Downloading apoc-"$APOC_VERSION"-all.jar..." \
+    echo "$PREF Downloading apoc-$APOC_VERSION-all.jar..." \
         && wget https://github.com/neo4j-contrib/neo4j-apoc-procedures/releases/download/$APOC_VERSION/$FILE_NAME \
         && mv $FILE_NAME $DEST
 
-    echo $PREF"Done!"
+    echo "$PREF Done!"
 fi
 
 
