@@ -1,5 +1,5 @@
 PROTO = "bolt"
 USER = "neo4j"
-PASSWORD = "StrongPassword"
+PASSWORD = "MyStrongPassword"
 HOSTNAME = "0.0.0.0"
 PORT = "8000"

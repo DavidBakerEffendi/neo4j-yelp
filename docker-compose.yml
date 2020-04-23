@@ -11,6 +11,12 @@ services:
       - ./neo4j-community-x.x.x/conf:/conf
       - ./neo4j-community-x.x.x/plugins:/plugins
       - ./neo4j-community-x.x.x/import:/import
+    environment:
+      NEO4J_AUTH: neo4j/MyStrongPassword
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
     networks:
       - public
 volumes:
