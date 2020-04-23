@@ -7,7 +7,12 @@ Contains Python scripts to import and model the Yelp challenge dataset into Neo4
 I have created a handy installation script that will install Docker, download the APOC plugin, and run a properly configured Neo4j container.
 Regarding the installation of Docker, only Ubuntu is currently supported.
 
-All the files in `neo4j-community-x.x.x` are bound to the Docker container so all pre-processed Yelp data can go in `neo4j-community-x.x.x/import`.
+All the files in `neo4j-community-x.x.x` are bound to the Docker container so all pre-processed Yelp data can go in `neo4j-community-x.x.x/import`. 
+
+To start, simply run:
+```bash
+./init.sh
+```
 
 ## Getting Started (running locally)
 
