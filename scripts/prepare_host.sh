@@ -6,9 +6,7 @@ hash docker 2>/dev/null || {
     read -r -p "$PREF I can install this for Ubuntu, may I proceed? [y/N] " response
     if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
     then
-        sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
-            && sudo chmod +x /usr/local/bin/docker-compose \
-            && sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose \
+        sudo apt install -y docker.io \
             && sudo groupadd docker \
             && sudo usermod -aG docker $USER \
             && sudo docker-compose --version \
